@@ -1,10 +1,3 @@
-/*
- * d_led.c
- *
- *  Created on: Feb 14, 2018
- *      Author: mikol
- */
-
 #include <avr/io.h>
 #include <avr/interrupt.h>
 #include <avr/pgmspace.h>
@@ -49,7 +42,7 @@ void d_led_init(void)
 
 	TCCR0A |=(1<<WGM01);	//tryb ctc
 	TCCR0B |= (1<<CS00) | (1<<CS02);	//preskaler 1024
-	OCR0A = 38;		//dodatkowy podzia³ przez 38
+	OCR0A = 38;		//dodatkowy podziaï¿½ przez 38
 	TIMSK0 |= (1<<OCIE0A);	//zezwolenie na przerwania od porownania z rejestrem OCR0A
 
 }

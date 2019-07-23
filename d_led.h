@@ -1,10 +1,3 @@
-/*
- * d_led.h
- *
- *  Created on: Feb 14, 2018
- *      Author: mikol
- */
-
 #ifndef D_LED_H_
 #define D_LED_H_
 
@@ -19,7 +12,7 @@
 #define CA3 (1<<PB2)
 #define CA4 (1<<PB3)
 
-extern volatile uint8_t cy1;	//extern- powoduje ze te zmienne beda dostepne we wsazzystkich modulach
+extern volatile uint8_t cy1;	//extern- powoduje ze te zmienne beda dostepne we wszystkich modulach
 extern volatile uint8_t cy2;	//ktore maja dolaczony plik tej biblioteki
 extern volatile uint8_t cy3;
 extern volatile uint8_t cy4;

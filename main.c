@@ -1,10 +1,3 @@
-/*
- * main.c
- *
- *  Created on: Feb 14, 2018
- *      Author: mikol
- */
-
 #include <avr/io.h>
 #include <avr/interrupt.h>
 #include "d_led.h"
