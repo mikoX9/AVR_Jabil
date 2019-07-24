@@ -1,6 +1,10 @@
 #ifndef KLAWIATURA_H_
 #define KLAWIATURA_H_
 
+#include <avr/delay.h>
+#include <math.h>
+
+#define  _NIO() asm volatile ("nop")
 
 // *** PORT
 #define PORT(x) SPORT(x)
@@ -11,8 +15,6 @@
 // *** DDR
 #define DDR(x) SDDR(x)
 #define SDDR(x) (DDR##x)
-
-
 
 
 //definicje rzedow  R->ROW
@@ -45,14 +47,13 @@
 #define C_3_MASK  (1<<C_3_PIN)
 #define C_4_MASK  (1<<C_4_PIN)
 
-void klawiatura_init(void);
 
-//flagi prrzyciskow
+void klawiatura_init(void);
 
 volatile uint16_t przyciski;  //16bit-> kazdy bit odpowiada za jeden przycisk
 
+typedef void( * funkcja )( void );
 
-void obsluga_przyciskow();
-
+void obsluga_przyciskow( funkcja mruganie );
 
 #endif
