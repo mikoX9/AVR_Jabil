@@ -1,1 +1,2 @@
-Napisane w miare ok, ale bez obslugi drgan i bez kilku klikniec.
+Kod napisany zajebiscie przenosnie, ale bez obslugi drgan i bez podwojnych klikniec.
+Podlczenie do klawiatury od lewej strony PD0...
