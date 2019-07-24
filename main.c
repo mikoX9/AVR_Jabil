@@ -35,6 +35,10 @@ int main(void)
 		cy3= (licznik%100)/10;
 		cy4= licznik%10;
 		licznik++;
+		
+		if(licznik==10000)
+			licznik=1;
+		
 		_delay_ms(DELAY);
 	}
 
