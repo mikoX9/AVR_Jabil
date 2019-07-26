@@ -20,7 +20,6 @@
 
 int main(void)
 {
-	
 	int zminna_lokal;
 
 	d_led_init();
