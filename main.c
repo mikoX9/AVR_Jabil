@@ -20,6 +20,8 @@
 
 int main(void)
 {
+	int zmienna_repo_git;
+	
 	d_led_init();
 
 	cy1= 0;
