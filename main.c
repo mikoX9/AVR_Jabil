@@ -36,10 +36,16 @@ int main(void)
 		cy4= licznik%10;
 		licznik++;
 		
+<<<<<<< HEAD
 		if(licznik==10000)
 			licznik=1;
+=======
+		if(licznik == 10000)
+		      licznik = 0;
+>>>>>>> a4ad56d6fe80de5cc89a00c5bad993d8c083ec1c
 		
 		_delay_ms(DELAY);
+		
 	}
 
 }

@@ -1,6 +1,5 @@
 #include <avr/io.h>
 #include <avr/interrupt.h>
-#include <avr/pgmspace.h>
 #include "d_led.h"
 
 volatile uint8_t cy1;	
@@ -9,7 +8,7 @@ volatile uint8_t cy3;
 volatile uint8_t cy4;
 
 
-const uint8_t liczby[11] PROGMEM=                 //zapisywanie do pamieci FLASH, tablica ustalona anod
+const uint8_t liczby[11]=                 //zapisywanie do pamieci FLASH, tablica ustalona anod
 {
 		(1<< 0)+(1<< 1)+(1<< 2)+(1<< 4)+(1<< 5)+(1<< 6),			//0
 		(1<< 2)+(1<< 5),											//1
@@ -47,10 +46,10 @@ ISR(TIMER0_COMPA_vect)
 	
 	KATODY_PORT = ~ licznik;
 
-	if(licznik == 1) LED_DATA=(pgm_read_byte( &liczby[cy1]));          //odczytywanie z pamieci FLASHh
-	else if(licznik == 2) LED_DATA=(pgm_read_byte( &liczby[cy2]));
-	else if(licznik == 4) LED_DATA=(pgm_read_byte( &liczby[cy3]));
-	else if(licznik == 8) LED_DATA=(pgm_read_byte( &liczby[cy4]));
+	if(licznik == 1) LED_DATA=( &liczby[cy1] );          //odczytywanie z pamieci FLASHh
+	else if(licznik == 2) LED_DATA=( &liczby[cy2] );
+	else if(licznik == 4) LED_DATA=( &liczby[cy3] );
+	else if(licznik == 8) LED_DATA=( &liczby[cy4] );
 
 	licznik <<=1;
 
