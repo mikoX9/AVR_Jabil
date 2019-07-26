@@ -22,6 +22,7 @@ int main(void)
 {
 	
 	int zminna_repo_lokal;
+
 	
 	d_led_init();
 
@@ -41,14 +42,10 @@ int main(void)
 		cy3= (licznik%100)/10;
 		cy4= licznik%10;
 		licznik++;
-		
-<<<<<<< HEAD
-		if(licznik==10000)
-			licznik=1;
-=======
+
 		if(licznik == 10000)
 		      licznik = 0;
->>>>>>> a4ad56d6fe80de5cc89a00c5bad993d8c083ec1c
+
 		
 		_delay_ms(DELAY);
 		
