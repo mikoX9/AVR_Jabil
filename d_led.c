@@ -46,10 +46,10 @@ ISR(TIMER0_COMPA_vect)
 	
 	KATODY_PORT = ~ licznik;
 
-	if(licznik == 1) LED_DATA=( &liczby[cy1] );          //odczytywanie z pamieci FLASHh
-	else if(licznik == 2) LED_DATA=( &liczby[cy2] );
-	else if(licznik == 4) LED_DATA=( &liczby[cy3] );
-	else if(licznik == 8) LED_DATA=( &liczby[cy4] );
+	if(licznik == 1) LED_DATA=( liczby[cy1] );          //odczytywanie z pamieci FLASHh
+	else if(licznik == 2) LED_DATA=( liczby[cy2] );
+	else if(licznik == 4) LED_DATA=( liczby[cy3] );
+	else if(licznik == 8) LED_DATA=( liczby[cy4] );
 
 	licznik <<=1;
 
