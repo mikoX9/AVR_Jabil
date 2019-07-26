@@ -20,7 +20,8 @@
 
 int main(void)
 {
-
+	int zminna_online;
+	
 	d_led_init();
 
 	cy1= 0;
