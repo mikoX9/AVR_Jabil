@@ -20,10 +20,7 @@
 
 int main(void)
 {
-	
-	int zminna_repo_online;
 
-	
 	d_led_init();
 
 	cy1= 0;
